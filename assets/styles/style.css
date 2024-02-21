@@ -1,0 +1,257 @@
+/**Fonts**/
+@font-face{
+    font-family: "Inter";
+    src:
+      url("../fonts/Inter-Thin.ttf");
+    font-weight: 100;
+    font-display: swap;    
+}
+
+@font-face{
+    font-family: "Inter";
+    src:
+      url("../fonts/Inter-ExtraLight.ttf");
+    font-weight: 200;   
+    font-display: swap;    
+}
+
+@font-face{
+    font-family: "Inter";
+    src:
+      url("../fonts/Inter-Light.ttf");
+    font-weight: 300;   
+    font-display: swap;    
+}
+
+@font-face{
+    font-family: "Inter";
+    src:
+      url("../fonts/Inter-Regular.ttf");
+    font-weight: 400;   
+    font-display: swap;    
+}
+
+@font-face{
+    font-family: "Inter";
+    src:
+      url("../fonts/Inter-Medium.ttf");
+    font-weight: 500;   
+    font-display: swap;    
+}
+
+@font-face{
+    font-family: "Inter";
+    src:
+      url("../fonts/Inter-SemiBold.ttf");
+    font-weight: 600;   
+    font-display: swap;    
+}
+
+@font-face{
+    font-family: "Inter";
+    src:
+      url("../fonts/Inter-Bold.ttf");
+    font-weight: 700;   
+    font-display: swap;    
+}
+
+@font-face{
+    font-family: "Inter";
+    src:
+      url("../fonts/Inter-ExtraBold.ttf");
+    font-weight: 800;   
+    font-display: swap;    
+}
+
+/**Variables**/
+:root{
+    --primary-color:#282828;
+    --secondary-color: #484848;
+    --banner-bg: #FFCD9E;
+}
+
+/**Reset**/
+
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body {
+    font-family: Inter, serif;
+}
+
+button{
+    outline: none;
+    border: 0;
+    cursor: pointer;
+}
+
+
+/**Typography**/
+.text-sm{
+    font-size: 1.6rem;
+}
+
+.text-md{
+    font-size: 1.9rem;
+
+}
+
+.text-xl{
+    font-size: 3.5rem; 
+}
+
+.wrapper{
+    width: 90%;
+    max-width: 1536px;
+    margin: 0 auto;
+    padding-inline: 1rem;
+}
+
+article{
+    background-color: var(--banner-bg);
+    width: 100%;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+}
+
+article  .artice__subDiv.article__banner{
+    padding-block: 2rem;
+}
+
+
+article  .artice__subDiv > *:not(:first-child){
+    margin-top: 2.8rem;
+}
+
+article  .artice__subDiv br{
+    @media screen and (max-width: 1024px){
+       display: none;
+    } 
+}
+
+article  .artice__subDiv h1{
+    color: var(--primary-color);
+    font-family: inherit;
+    font-weight: 800;
+    line-height: 5.5rem;
+}
+
+article  .artice__subDiv p{
+    color: var(--secondary-color);
+    font-weight: 500;
+    line-height: 3rem;
+}
+
+article  .artice__subDiv h4{
+    font-weight: 800;
+    color: var(--primary-color);
+}
+
+article  .artice__subDiv .register {
+    text-align: center;
+}
+
+
+article  .artice__subDiv .register .register__form{
+    display: grid;
+    grid-template-columns: 34rem 21rem;
+    grid-gap: 2rem;
+    margin-top: 4rem;
+}
+
+article  .artice__subDiv .register .register__form input{
+    background-color: #ffffff;
+    padding: 1.8vh;
+    border: 3px solid #000000;
+    border-radius: 0.8rem;
+    width: 100%;
+    color: var(--secondary-color);
+}
+
+article  .artice__subDiv .register .register__form input::placeholder{
+    font-weight: 600;
+    font-size: 1.8rem;
+    color: #888888;
+}
+
+article  .artice__subDiv .register .register__form button[type="submit"]{
+    background-color: var(--primary-color);
+    color: #ffffff;
+    padding: 1.8rem;
+    font-weight: 600;
+    font-size: 1.8rem;
+    border-radius: 0.8rem;
+    display: inline-block;
+}
+
+
+article  .artice__subDiv .register span{
+    color: #ffffff;
+}
+
+footer{
+    background-color: var(--primary-color);
+    min-height: 40vh;
+    display: flex;
+    align-items: center;
+}
+
+footer .wrapper{
+    display: flex;
+    justify-content: space-between;
+    padding-block: 2rem;
+}
+
+footer ul.footer__quickLinks--list > li:not(:first-child){
+    margin-top: 1.6rem;
+}
+
+footer ul.footer__quickLinks--list li a.footer__quickLinks--link{
+    color: #ffffff;
+    font-weight: 400;
+}
+
+footer .wrapper > div{
+    text-align: end;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+footer ul.footer__socialLinks--list > li{
+    display: inline-block;
+}
+
+footer ul.footer__socialLinks--list > li:not(:first-child){
+    margin-left: 1.6rem;
+}
+
+footer .footer__mailLink{
+    display: inline-block;
+    color: #ffffff;
+    font-weight: 400;
+    margin-top: 1.6rem;
+}
+
+
+/**Media Query**/
+
+@media screen and (min-width: 1024px) {
+    article  .artice__subDiv.article__banner{
+        background-image: url("../images/bannerBg.png");
+        background-repeat: no-repeat;
+        background-position:  bottom 0px right 0px;
+        background-size: contain;
+        height: 100%;
+    }
+}
